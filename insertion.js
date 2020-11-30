@@ -1,16 +1,13 @@
-//** word count 
-//**  const countWords = str => str.split(' ').length;
-
-function WordCount(str) { 
-    return str.split(" ").length;
-  }
-  
-  console.log(WordCount("Testing one two test"));
-
-
-  //** */
-
-const length = ({ length }) => length;
-
-const countVowels = str => str.match(/[aeiou]/g).length;
-
+function insertionSort(inputArr) {
+  let n = inputArr.length;
+      for (let i = 1; i < n; i++) {
+          let current = inputArr[i];
+          let j = i-1; 
+          while ((j > -1) && (current < inputArr[j])) {
+              inputArr[j+1] = inputArr[j];
+              j--;
+          }
+          inputArr[j+1] = current;
+      }
+  return inputArr;
+}
